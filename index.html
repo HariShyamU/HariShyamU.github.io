@@ -27,9 +27,9 @@
             </div>
           </div>
         </div>
-        <div class="divline">   </div>
+        <div class="divlinebot">   </div>
         <div class="navigation">
-          <div style="padding-left:30vw;">HOME</div> <div>PROJECTS</div> <div>PORTFOLIO</div> <div>CONTACT</div>
+          <div class="nav1" style="padding-left:30vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
         </div>
       </div>
       <div class="projects">
@@ -66,9 +66,9 @@
             </div>
           </div>
         </div>
-        <div class="divline">   </div>
+        <div class="divlinebot">   </div>
         <div class="navigation">
-          <div style="padding-left:30vw;">HOME</div> <div>PROJECTS</div> <div>PORTFOLIO</div> <div>CONTACT</div>
+          <div class="nav1" style="padding-left:30vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
         </div>
       </div>
       <div class="portfolio">
@@ -90,9 +90,9 @@
             </div>
           </div>
         </div>
-        <div class="divline">   </div>
+        <div class="divlinebot">   </div>
         <div class="navigation">
-          <div style="padding-left:30vw;">HOME</div> <div>PROJECTS</div> <div>PORTFOLIO</div> <div>CONTACT</div>
+          <div class="nav1" style="padding-left:30vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
         </div>
       </div>
       <div class="contact">
@@ -117,9 +117,9 @@
             </div>
           </div>
         </div>
-        <div class="divline">   </div>
+        <div class="divlinebot">   </div>
         <div class="navigation">
-          <div style="padding-left:30vw;">HOME</div> <div>PROJECTS</div> <div>PORTFOLIO</div> <div>CONTACT</div>
+          <div class="nav1" style="padding-left:30vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
         </div>
       </div>
     </div>
@@ -134,5 +134,30 @@
         heightAdjust:true,
       });
     });
+
+    $('.nav1').click(function(e) {
+     e.preventDefault();
+     var slideno = $(this).data('slide');
+     $('.siteSlider').slick('slickGoTo', 0);
+    });
+
+    $('.nav2').click(function(e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.siteSlider').slick('slickGoTo', 1);
+    });
+
+    $('.nav3').click(function(e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.siteSlider').slick('slickGoTo', 2);
+    });
+
+    $('.nav4').click(function(e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.siteSlider').slick('slickGoTo', 3);
+    });
+
   </script>
 </html>
