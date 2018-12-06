@@ -65,8 +65,9 @@ h2 {
 }
 
 .navigation {
+  z-index: 2;
   color:white;
-  position: absolute;
+  position: fixed;
   bottom:0vh;
   font-size: 1.7vw;
   background-color: black;
