@@ -75,7 +75,7 @@ h2 {
 }
 
 .divlinebot {
-  position: absolute;
+  position: fixed;
   bottom:10vh;
   margin-top: 0.5vh;
   margin-bottom: 0.5vh;
