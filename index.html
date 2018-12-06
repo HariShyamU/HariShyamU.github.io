@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="slick.css"/>
   <link rel="stylesheet" type="text/css" href="main.css"/>
   <body>
-    <div class="navigation">
-      <div class="nav1" style="padding-left:27vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
+    <div id="nav" class="navigation">
+      <div class="nav1 hvr-underline-from-center current" style="margin-left:24vw;">HOME</div> <div class="nav2 hvr-underline-from-center">PROJECTS</div> <div class="nav3 hvr-underline-from-center">PORTFOLIO</div> <div class="nav4 hvr-underline-from-center">CONTACT</div>
     </div>
     <div class="siteSlider">
       <div style="height:100vh;" class="home">
@@ -42,22 +42,22 @@
               <h2>What I have done</h2>
             </div>
             <div data-depth="0.2" class="content">
-              <div class="card">
+              <div onclick="window.open('http://www.foliohawks.com')" class="card">
                 <img class="logo" src="foliohawks.png" alt="">
                 <h3>folioHawks</h3>
                 <p>Design & Development</p>
               </div>
-              <div class="card">
+              <div onclick="window.open('https://github.com/HariShyamU/Augustus')" class="card">
                 <img class="sample" src="sample.png" alt="">
                 <h3>Augustus</h3>
                 <p>Design & Development</p>
               </div>
-              <div class="card">
+              <div onclick="window.open('https://github.com/HariShyamU?tab=repositories')" class="card">
                 <img class="sample" src="sample.png" alt="">
                 <h3>Iragiri</h3>
                 <p>Design & Development</p>
               </div>
-              <div class="card">
+              <div onclick="window.open('https://github.com/HariShyamU?tab=repositories')" class="card">
                 <img class="sample" src="sample.png" alt="">
                 <h3>ExotiCamp</h3>
                 <p>Design & Development</p>
@@ -102,12 +102,12 @@
             </div>
             <div data-depth="0.2" class="content">
               <div class="icons">
-                <img src="linkedin.png" alt="">
-                <img src="github.png" alt="">
-                <img src="gmail.png" alt="">
-                <img src="facebook.png" alt="">
-                <img src="instagram.png" alt="">
-                <img src="twitter.png" alt="">
+                <img onclick="window.open('https://www.linkedin.com/in/harishyamu/')" src="linkedin.png" alt="">
+                <img onclick="window.open('https://github.com/HariShyamU/')" src="github.png" alt="">
+                <img onclick="window.open('mailto:hari.shyam.942@gmail.com')" src="gmail.png" alt="">
+                <img onclick="window.open('https://www.facebook.com/hari.shyam.942')" src="facebook.png" alt="">
+                <img onclick="window.open('https://www.instagram.com/harishyam.942/')" src="instagram.png" alt="">
+                <img onclick="window.open('https://twitter.com/hari_shyam_942')" src="twitter.png" alt="">
               </div>
             </div>
           </div>
@@ -131,26 +131,50 @@
 
     $('.nav1').click(function(e) {
      e.preventDefault();
+     var currentSlide = $('.siteSlider').slick('slickCurrentSlide') + 1;
+     console.log(currentSlide);
+     $("#nav div:nth-child(" + currentSlide + ")").css("background-color", "black");
+     $("#nav div:nth-child(" + currentSlide + ")").css("color", "white");
      var slideno = $(this).data('slide');
      $('.siteSlider').slick('slickGoTo', 0);
     });
 
     $('.nav2').click(function(e) {
     e.preventDefault();
+    var currentSlide = $('.siteSlider').slick('slickCurrentSlide') + 1;
+    console.log(currentSlide);
+    $("#nav div:nth-child(" + currentSlide + ")").css("background-color", "black");
+    $("#nav div:nth-child(" + currentSlide + ")").css("color", "white");
     var slideno = $(this).data('slide');
     $('.siteSlider').slick('slickGoTo', 1);
     });
 
     $('.nav3').click(function(e) {
     e.preventDefault();
+    var currentSlide = $('.siteSlider').slick('slickCurrentSlide') + 1;
+    console.log(currentSlide);
+    $("#nav div:nth-child(" + currentSlide + ")").css("background-color", "black");
+    $("#nav div:nth-child(" + currentSlide + ")").css("color", "white");
     var slideno = $(this).data('slide');
     $('.siteSlider').slick('slickGoTo', 2);
     });
 
     $('.nav4').click(function(e) {
     e.preventDefault();
+    var currentSlide = $('.siteSlider').slick('slickCurrentSlide') + 1;
+    console.log(currentSlide);
+    $("#nav div:nth-child(" + currentSlide + ")").css("background-color", "black");
+    $("#nav div:nth-child(" + currentSlide + ")").css("color", "white");
     var slideno = $(this).data('slide');
     $('.siteSlider').slick('slickGoTo', 3);
+    });
+
+    $('.siteSlider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      var currentSlide = $('.siteSlider').slick('slickCurrentSlide') + 1;
+      console.log(currentSlide);
+      $("#nav div:nth-child(" + currentSlide + ")").css("background-color", "white");
+      $("#nav div:nth-child(" + currentSlide + ")").css("color", "black");
+      // $("p:first").addClass("intro");
     });
 
     var scene1 = document.getElementById('par1');
