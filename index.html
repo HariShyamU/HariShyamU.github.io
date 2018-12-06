@@ -16,33 +16,33 @@
         </div>
         <div class="divline">   </div>
         <div class="homeBody">
-          <div class="bodyContent">
-            <div class="title">
+          <div id="par1" class="bodyContent">
+            <div data-depth="0.1" class="title">
               <h2>Who am I?</h2>
             </div>
-            <div class="content">
+            <div data-depth="0.2" class="content">
               <p>I am a 22 year old Full-stack developer, UI designer and an Entrepreneur from Chennai, India. </p>
               <p>I design, develop and provide a way to deliver your business ventures, through the digital landscape. </p>
               <p>more bio text goes </p>
             </div>
           </div>
         </div>
+        <div class="divlinebot">   </div>
         <div class="navigation">
-          <div class="divlinebot">   </div> 
           <div class="nav1" style="padding-left:27vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
         </div>
       </div>
-      <div class="projects">
+      <div style="height:100vh;" class="projects">
         <div class="header">
           <h1 style="font-family: 'Montserrat', sans-serif; text-align:center;">Projects</h1>
         </div>
         <div class="divline">   </div>
         <div class="homeBody">
-          <div class="bodyContent">
-            <div class="title">
+          <div id="par2" class="bodyContent">
+            <div data-depth="0.1" class="title">
               <h2>What I have done</h2>
             </div>
-            <div class="content">
+            <div data-depth="0.2" class="content">
               <div class="card">
                 <img class="logo" src="foliohawks.png" alt="">
                 <h3>folioHawks</h3>
@@ -71,17 +71,17 @@
           <div class="nav1" style="padding-left:27vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
         </div>
       </div>
-      <div class="portfolio">
+      <div style="height:100vh;" class="portfolio">
         <div class="header">
           <h1 style="font-family: 'Montserrat', sans-serif; text-align:center;">PortFolio</h1>
         </div>
         <div class="divline">   </div>
         <div class="homeBody">
-          <div class="bodyContent">
-            <div class="title">
+          <div id="par3" class="bodyContent">
+            <div data-depth="0.1" class="title">
               <h2>What do I know?</h2>
             </div>
-            <div style="text-align:left; padding-left:15vw;" class="content">
+            <div data-depth="0.2" style="text-align:left; padding-left:15vw;" class="content">
               <p>Back-End Languages/Frameworks : C#, Python, flask, Node JS  </p>
               <p>Front-End Languages/Frameworks : React JS, React-Router, React-Redux, CSS, JavaScript, WebGL  </p>
               <p>Database Systems : PostgreSQL  </p>
@@ -95,17 +95,17 @@
           <div class="nav1" style="padding-left:27vw;">HOME</div> <div class="nav2">PROJECTS</div> <div class="nav3">PORTFOLIO</div> <div class="nav4">CONTACT</div>
         </div>
       </div>
-      <div class="contact">
+      <div style="height:100vh;" class="contact">
         <div class="header">
           <h1 style="font-family: 'Montserrat', sans-serif; text-align:center;">Contact</h1>
         </div>
         <div class="divline">   </div>
         <div class="homeBody">
-          <div class="bodyContent">
-            <div class="title">
+          <div id="par4" class="bodyContent">
+            <div data-depth="0.1" class="title">
               <h2>How to reach me?</h2>
             </div>
-            <div class="content">
+            <div data-depth="0.2" class="content">
               <div class="icons">
                 <img src="linkedin.png" alt="">
                 <img src="github.png" alt="">
@@ -125,6 +125,7 @@
     </div>
     <script src="jquery.min.js"></script>
     <script src="slick.min.js"></script>
+    <script src="parallax.js"></script>
   </body>
   <script type="text/javascript">
     $(document).ready(function(){
@@ -158,6 +159,15 @@
     var slideno = $(this).data('slide');
     $('.siteSlider').slick('slickGoTo', 3);
     });
+
+    var scene1 = document.getElementById('par1');
+    var scene2 = document.getElementById('par2');
+    var scene3 = document.getElementById('par3');
+    var scene4 = document.getElementById('par4');
+    var parallax1 = new Parallax(scene1);
+    var parallax2 = new Parallax(scene2);
+    var parallax3 = new Parallax(scene3);
+    var parallax4 = new Parallax(scene4);
 
   </script>
 </html>
