@@ -172,7 +172,10 @@ h2 {
 .resumicon {
   position: absolute;
   left:75vw;
-  top:35vh;
+  top:50vh;
+}
+
+.resumicon img {
   width:10vw;
   height: 8vw;
 }
