@@ -169,6 +169,14 @@
     $('.siteSlider').slick('slickGoTo', 3);
     });
 
+    $('.siteSlider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      var currentSlide = $('.siteSlider').slick('slickCurrentSlide') + 1;
+      console.log(currentSlide);
+      $("#nav").children().css("background-color", "black");
+      $("#nav").children().css("color", "white");
+      // $("p:first").addClass("intro");
+    });
+
     $('.siteSlider').on('afterChange', function(event, slick, currentSlide, nextSlide){
       var currentSlide = $('.siteSlider').slick('slickCurrentSlide') + 1;
       console.log(currentSlide);
