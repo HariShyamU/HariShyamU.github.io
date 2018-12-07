@@ -121,6 +121,15 @@
     <script src="parallax.js"></script>
   </body>
   <script type="text/javascript">
+
+    $(document).ready(function() {
+      setTimeout(function() {
+        $(".divline").css("opacity","1");
+        $(".homeBody").css("opacity","1");
+        $(".divlinebot").css("opacity","1");
+      }, 1500);
+    });
+
     $(document).ready(function(){
       $('.siteSlider').slick({
         slidesToShow: 1,
