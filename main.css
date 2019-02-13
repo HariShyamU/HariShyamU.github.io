@@ -246,10 +246,10 @@ h2 {
 
 .card {
   cursor: pointer;
-  float: left;
   margin: 0 auto;
   display: inline-block;
   margin-left: 3vw;
+  margin-bottom: 5vh;
   padding-top: 1vh;
   padding-bottom: 1vh;
   width: 14vw;
@@ -290,9 +290,12 @@ h2 {
 }
 
 .resumicon {
-  position: absolute;
+  display: inline-block;
+  float:right;
+  margin-right:5vw;
+  /* position: absolute;
   right:5vw;
-  bottom: 5vh;
+  top: -4vh; */
 }
 
 .resumicon img {
